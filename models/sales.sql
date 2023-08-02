@@ -14,6 +14,8 @@ SELECT
   ###########
 	-- qty --
 	,s.quantity AS qty
+    -- margin --
+    ,{{ margin_percent('s.revenue', 's.quantity*CAST(p.purchSE_PRICE AS FLOAT64)') }} AS product_margin_percent
   -- revenue --
   ,s.revenue AS turnover
   -- cost --
