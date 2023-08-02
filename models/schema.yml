@@ -1,0 +1,35 @@
+version: 2
+
+models:
+
+    - name: sales
+      description: bonjour je m'appelle henri
+      tests:
+        - unique:
+            column_name: "(orders_id || '-' || products_id)"
+            
+      columns:
+          - name: orders_id
+            description: j'aimerais bien réussir ma vie
+            tests : 
+            - not_null 
+
+          - name: products_id
+            description: être aimééééééééé
+            tests : 
+              - not_null
+
+          - name: qty
+
+          - name: turnover
+            description: être beau avoir de l'argent
+            tests : 
+            - not_null
+
+          - name: purchase_cost
+            description: etre beau être intelligent
+            tests : 
+            - not_null
+
+          - name: margin
+            description: que les filles se jettent sur moi
